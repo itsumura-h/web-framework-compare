@@ -1,0 +1,31 @@
+version: '3'
+services:
+  python:
+    build:
+      context: .
+      dockerfile: ./docker/python/Dockerfile
+    tty: true
+    volumes:
+      - ./src/python:/applications
+    ports:
+      - 9010:8000
+
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    tty: true
+    volumes:
+      - ./src/php:/var/www
+    ports:
+      - 9011:8000
+
+  db:
+    image: postgres:alpine
+    tty: true
+    environment:
+      POSTGRES_DB: database
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      -  ./docker/db:/docker-entrypoint-initdb.d

@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "project"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+starlette = "^0.18.0"
+uvicorn = "^0.17.5"
+Jinja2 = "^3.0.3"
+python-multipart = "^0.0.5"
+Starlette-WTF = "^0.4.3"
+alembic = "^1.7.7"
+databases = "^0.5.5"
+SQLAlchemy = "^1.4.32"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
