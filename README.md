@@ -59,3 +59,19 @@ Indexes:
   5 | 2022_04_02_184216_aaa                                 |     2
 ```
 batchは何回目のマイグレーションで実行したか。同じ数字は同じタイミングで実行されたことを表す。
+
+## Rails
+```
+               Table "public.schema_migrations"
+ Column  |       Type        | Collation | Nullable | Default 
+---------+-------------------+-----------+----------+---------
+ version | character varying |           | not null | 
+Indexes:
+    "schema_migrations_pkey" PRIMARY KEY, btree (version)
+```
+
+```
+    version     
+----------------
+ 20220403081631
+```

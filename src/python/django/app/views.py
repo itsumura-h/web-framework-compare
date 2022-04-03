@@ -14,11 +14,11 @@ class SignIn(View):
     password = request.POST.get('password')
     request.session['email'] = email
     request.session['is_login'] = True
-    return redirect('/sign/signin/')
+    return redirect('/')
 
 
 class SignOut(View):
   def post(self, request):
     del request.session['is_login']
     del request.session['email']
-    return redirect('/sign/signin/')
+    return redirect('/')

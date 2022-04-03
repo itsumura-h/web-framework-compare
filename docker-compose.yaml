@@ -20,6 +20,16 @@ services:
     ports:
       - 9011:8000
 
+  ruby:
+    build:
+      context: .
+      dockerfile: ./docker/ruby/Dockerfile
+    tty: true
+    volumes:
+      - ./src/ruby:/applications
+    ports:
+      - 9012:8000
+
   db:
     image: postgres:alpine
     tty: true
